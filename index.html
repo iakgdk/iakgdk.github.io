@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="İdil Derin Akgedik – civil engineer and M.Sc. student in Water Resources at METU working on hydrological and regional climate modeling.">
+<meta name="author" content="İdil Derin Akgedik">
+<link rel="icon" href="favicon.png">
+<title>İdil Derin Akgedik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0} img{max-width:100%}
+/* Layout: fixed left panel (portrait, name, section menu with the current section marked, links); on the right the CV's own order told as a web page, with the two maps carrying the experience. One deliberate light look: warm white, ink and a single wine accent shared by the maps. */
+:root {
+  --bg: #FBFAF9;
+  --panel: #FFFFFF;
+  --ink: #24201F;
+  --muted: #6B6461;
+  --line: #E9E4E1;
+  --accent: #A3243A;
+  --soft: #F6ECEC;
+  --wine: #7A1A2C;
+  --display: "Lora", Georgia, "Times New Roman", serif;
+  --text: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; }
+p, ul { margin: 0; }
+figure { margin: 0; }
+.site[data-lang="en"] .tr, .site[data-lang="tr"] .en { display: none !important; }
+.site { display: grid; grid-template-columns: 320px minmax(0, 1fr); min-height: 100vh; }
+
+/* ---------- panel ---------- */
+.side { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: var(--panel); border-right: 1px solid var(--line); }
+.side-in { display: flex; flex-direction: column; gap: 22px; min-height: 100%; padding: 40px 30px 26px; }
+.who img { display: block; width: 124px; height: 124px; border-radius: 50%; object-fit: cover; object-position: 50% 28%; box-shadow: 0 0 0 5px var(--panel), 0 0 0 6px var(--line); }
+.who h1 { font-size: 1.8rem; line-height: 1.12; margin-top: 20px; }
+.who p { margin-top: 8px; font-size: .88rem; color: var(--muted); line-height: 1.5; }
+.menu { display: grid; font-size: .9rem; }
+.menu a { color: var(--muted); padding: 5px 0 5px 14px; border-left: 2px solid var(--line); transition: color .15s, border-color .15s; }
+.menu a:hover { color: var(--ink); text-decoration: none; }
+.menu a.on { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.btn:hover { text-decoration: none; border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #FFFFFF; }
+.btn svg { width: 15px; height: 15px; flex: none; }
+.ids { font-size: .8rem; color: var(--muted); display: grid; gap: 4px; font-variant-numeric: tabular-nums; }
+.ids b { color: var(--ink); font-weight: 600; }
+.ids .mail { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ids .mail span { user-select: all; color: var(--ink); }
+.copy { font: 600 .7rem/1 var(--text); border: 1px solid var(--line); background: var(--panel); color: var(--muted); padding: 5px 8px; border-radius: 6px; cursor: pointer; }
+.copy:hover { color: var(--ink); border-color: var(--accent); }
+.lang { margin-top: auto; display: inline-flex; align-self: flex-start; border: 1px solid var(--line); border-radius: 999px; padding: 2px; background: var(--panel); }
+.lang button { font: 600 .72rem/1 var(--text); letter-spacing: .06em; border: 0; background: none; color: var(--muted); padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: #FFFFFF; }
+
+/* ---------- content ---------- */
+main { min-width: 0; }
+.col { max-width: 900px; margin-left: clamp(0px, 4vw, 64px); padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 60px; border-bottom: 1px solid var(--line); }
+.kicker { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h2 { font-size: clamp(1.55rem, 2.4vw, 1.95rem); line-height: 1.2; margin-top: 8px; }
+.head { margin-bottom: 28px; }
+.stack { display: grid; gap: 22px; }
+
+/* profile */
+#profile { padding-top: 76px; }
+.statement { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; max-width: 22em; text-wrap: balance; }
+.statement em { font-style: italic; color: var(--accent); }
+.lead { margin-top: 22px; font-size: 1.03rem; max-width: 40em; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span { font-size: .82rem; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 12px; }
+#profile .chips { margin-top: 28px; }
+
+/* experience */
+.job { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.job + .job { margin-top: 22px; }
+.job figure { background: var(--bg); border-bottom: 1px solid var(--line); }
+.job figure img { display: block; width: 100%; height: auto; }
+.job figcaption { padding: 8px 22px 10px; font-size: .76rem; color: var(--muted); background: var(--panel); border-top: 1px solid var(--line); }
+.job .in { padding: 24px 28px 26px; display: grid; gap: 14px; }
+.jh { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; align-items: baseline; }
+.jh h3 { font-size: 1.35rem; line-height: 1.3; }
+.jh h3 .org { color: var(--accent); }
+.jh .when { font-size: .84rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sub { font-size: .84rem; color: var(--muted); margin-top: -10px; }
+.nums { display: flex; flex-wrap: wrap; gap: 10px 30px; padding: 14px 0 2px; border-top: 1px solid var(--line); }
+.nums div { font-size: .76rem; color: var(--muted); line-height: 1.3; }
+.nums b { display: block; font-family: var(--display); font-size: 1.55rem; font-weight: 500; color: var(--accent); }
+ul.pts { padding-left: 18px; display: grid; gap: 6px; font-size: .95rem; }
+ul.pts li::marker { color: var(--accent); }
+
+/* education */
+.edu { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; display: grid; gap: 10px; align-content: start; }
+.box h3 { font-size: 1.15rem; line-height: 1.35; }
+.box .m { font-size: .84rem; color: var(--muted); }
+.thesis { background: var(--soft); border-radius: 10px; padding: 14px 16px; font-size: .92rem; }
+.thesis b { color: var(--accent); font-weight: 600; }
+.box .chips span { font-size: .78rem; padding: 3px 10px; }
+
+/* projects */
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pr { border-top: 3px solid var(--accent); background: var(--panel); border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-radius: 0 0 12px 12px; padding: 18px 20px 20px; display: grid; gap: 8px; align-content: start; }
+.pr .code { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pr h3 { font-size: 1.08rem; line-height: 1.35; }
+.pr .role { font-size: .82rem; color: var(--accent); font-weight: 600; }
+.pr p { font-size: .88rem; color: var(--muted); }
+
+/* publications */
+.pubs { display: grid; gap: 20px; }
+.pub { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 18px; }
+.tag { align-self: start; justify-self: start; font-size: .66rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 2px 7px; margin-top: 4px; }
+.tag.new { color: var(--accent); border-color: var(--accent); }
+.pub .t { font-family: var(--display); font-size: 1.07rem; line-height: 1.45; }
+.pub .a { margin-top: 4px; font-size: .86rem; color: var(--muted); }
+.pub .a b { color: var(--ink); font-weight: 600; }
+.pub .v { margin-top: 2px; font-size: .86rem; color: var(--muted); }
+.pub .v i { font-style: italic; }
+.note { font-size: .86rem; color: var(--muted); }
+
+/* talks and events */
+.events { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.ev { border-radius: 16px; padding: 26px 28px 28px; display: grid; gap: 12px; align-content: start; }
+.ev.hero { background: var(--wine); color: #FBF3F1; }
+.ev.plain { background: var(--panel); border: 1px solid var(--line); }
+.ev .type { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.ev.hero .type { color: #EBB9B7; }
+.ev.plain .type { color: var(--accent); }
+.ev .big { font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; letter-spacing: -.01em; }
+.ev.plain .big { font-size: clamp(1.7rem, 2.8vw, 2.1rem); line-height: 1.1; }
+.ev h3 { font-size: 1.2rem; line-height: 1.35; }
+.ev .where { font-size: .86rem; }
+.ev.hero .where { color: #E8CFCB; }
+.ev.plain .where { color: var(--muted); }
+.ev p { font-size: .92rem; }
+.ev.hero p { color: #F1DEDB; }
+.ev.plain p { color: var(--muted); }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 34px; }
+.skills h3 { font-family: var(--text); font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+/* engagement */
+.eng { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.eng div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.eng b { display: block; font-family: var(--display); font-size: 1.05rem; font-weight: 500; line-height: 1.35; }
+.eng small { display: block; font-size: .78rem; color: var(--accent); font-weight: 600; margin-top: 4px; }
+.eng p { margin-top: 8px; font-size: .88rem; color: var(--muted); }
+.water { font-family: var(--display); font-size: 1.15rem; line-height: 1.6; max-width: 36em; }
+
+footer { padding-block: 28px 40px; font-size: .8rem; color: var(--muted); }
+footer .col { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
+
+@media (max-width: 1000px) {
+  .site { grid-template-columns: 1fr; }
+  .side { position: relative; height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .side-in { padding: 26px max(20px, env(safe-area-inset-right, 0px)) 22px max(20px, env(safe-area-inset-left, 0px)); gap: 16px; position: relative; }
+  .who { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 18px; align-items: center; padding-right: 96px; }
+  .who img { width: 92px; height: 92px; }
+  .who h1 { margin-top: 0; font-size: 1.5rem; }
+  .menu { display: flex; flex-wrap: wrap; gap: 2px 14px; }
+  .menu a { border-left: 0; padding: 2px 0; }
+  .lang { position: absolute; top: 22px; right: max(20px, env(safe-area-inset-right, 0px)); margin: 0; }
+  .col { margin-left: 0; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  section { padding-block: 46px; }
+  #profile { padding-top: 46px; }
+}
+@media (max-width: 700px) {
+  .edu, .grid3, .events, .skills, .eng { grid-template-columns: 1fr; }
+  .pub { grid-template-columns: 1fr; gap: 4px; }
+  .who { grid-template-columns: 70px minmax(0, 1fr); }
+  .who img { width: 70px; height: 70px; box-shadow: 0 0 0 3px var(--panel), 0 0 0 4px var(--line); }
+  .who h1 { font-size: 1.3rem; }
+  .job .in { padding: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+</head>
+<body>
+<div class="site" id="site" data-lang="en">
+
+<aside class="side">
+  <div class="side-in">
+    <div class="who">
+      <img src="photo.jpg" alt="Portrait of İdil Derin Akgedik" width="600" height="600">
+      <div>
+        <h1>İdil Derin Akgedik</h1>
+        <p><span class="en">Civil Engineer · Hydrological and Climate Modeling · HPC</span><span class="tr">İnşaat Mühendisi · Hidrolojik ve İklim Modellemesi · YBH</span></p>
+      </div>
+    </div>
+    <nav class="menu" aria-label="Sections" id="menu">
+      <a href="#profile" data-jump="profile"><span class="en">Profile</span><span class="tr">Profil</span></a>
+      <a href="#experience" data-jump="experience"><span class="en">Experience</span><span class="tr">Deneyim</span></a>
+      <a href="#education" data-jump="education"><span class="en">Education</span><span class="tr">Eğitim</span></a>
+      <a href="#projects" data-jump="projects"><span class="en">Research projects</span><span class="tr">Araştırma projeleri</span></a>
+      <a href="#publications" data-jump="publications"><span class="en">Publications</span><span class="tr">Yayınlar</span></a>
+      <a href="#talks" data-jump="talks"><span class="en">Talks and events</span><span class="tr">Konuşmalar ve etkinlikler</span></a>
+      <a href="#skills" data-jump="skills"><span class="en">Skills</span><span class="tr">Beceriler</span></a>
+      <a href="#engagement" data-jump="engagement"><span class="en">Certifications and engagement</span><span class="tr">Sertifikalar ve gönüllülük</span></a>
+    </nav>
+    <div class="links">
+      <a class="btn primary" href="Idil_Derin_Akgedik_CV.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg>
+        <span class="en">CV (PDF)</span><span class="tr">Özgeçmiş (PDF)</span></a>
+      <a class="btn" href="https://scholar.google.com/citations?user=gdYMquUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="https://orcid.org/0009-0004-2358-7171" target="_blank" rel="noopener">ORCID</a>
+      <a class="btn" href="https://www.linkedin.com/in/idil-derin-akgedik-352097210" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="ids">
+      <span>ORCID iD <b>0009-0004-2358-7171</b></span>
+      <span class="mail"><span id="email">akgedik.idil@metu.edu.tr</span><button class="copy" type="button" id="copy-email"><span class="en">Copy</span><span class="tr">Kopyala</span></button></span>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-tr" data-set="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</aside>
+
+<main>
+
+<section id="profile"><div class="col">
+  <p class="statement en">I study how a changing climate reaches <em>Türkiye's rivers, basins and cities</em>, from rainfall–runoff in a single catchment to kilometre-scale climate simulations on supercomputers.</p>
+  <p class="statement tr">Değişen iklimin <em>Türkiye'nin nehirlerine, havzalarına ve şehirlerine</em> nasıl ulaştığını inceliyorum: tek bir havzadaki yağış–akıştan süper bilgisayarlarda çalışan kilometre ölçekli iklim benzetimlerine kadar.</p>
+  <p class="lead en">Civil engineer and data and modeling specialist pursuing an M.Sc. in Water Resources at Middle East Technical University. I combine industry and academic experience in hydrological modeling, regional climate modeling, high-performance computing and reproducible spatiotemporal data workflows, and translate WRF, CMIP6, ERA5, satellite and station data into decision support for water resources, flood analysis, hydropower planning and climate risk.</p>
+  <p class="lead tr">ODTÜ'de Su Kaynakları alanında yüksek lisans yapan bir inşaat mühendisi ve veri ve modelleme uzmanıyım. Hidrolojik modelleme, bölgesel iklim modellemesi, yüksek başarımlı hesaplama ve tekrarlanabilir mekânsal-zamansal veri iş akışlarında sektör ve akademi deneyimini birleştiriyor; WRF, CMIP6, ERA5, uydu ve istasyon verilerini su kaynakları, taşkın analizi, hidroelektrik planlaması ve iklim riski için karar desteğine dönüştürüyorum.</p>
+  <div class="chips">
+    <span class="en">Hydrological modeling</span><span class="tr">Hidrolojik modelleme</span>
+    <span class="en">Rainfall–runoff (HBV, TUWmodel)</span><span class="tr">Yağış–akış (HBV, TUWmodel)</span>
+    <span class="en">Regional climate modeling</span><span class="tr">Bölgesel iklim modellemesi</span>
+    <span>WRF</span><span>MPAS-Atmosphere</span><span>CMIP5 · CMIP6 · CMIP7</span><span>ERA5</span>
+    <span class="en">High-performance computing</span><span class="tr">Yüksek başarımlı hesaplama</span>
+    <span>R &amp; Python</span>
+    <span class="en">Spatiotemporal analysis</span><span class="tr">Mekânsal-zamansal analiz</span>
+    <span class="en">Remote sensing</span><span class="tr">Uzaktan algılama</span>
+    <span class="en">Climate extremes</span><span class="tr">İklim ekstremleri</span>
+    <span class="en">Decision support</span><span class="tr">Karar desteği</span>
+  </div>
+</div></section>
+
+<section id="experience"><div class="col">
+  <div class="head"><div class="kicker"><span class="en">Professional experience</span><span class="tr">Mesleki deneyim</span></div>
+    <h2><span class="en">Water and climate, at national scale</span><span class="tr">Ulusal ölçekte su ve iklim</span></h2></div>
+
+  <article class="job">
+    <figure>
+      <img class="en" src="map_dsi_en.jpg" alt="Western Black Sea and Tigris basins with their streamflow gauges" width="1400" height="619" loading="lazy">
+      <img class="tr" src="map_dsi_tr.jpg" alt="Batı Karadeniz ve Dicle havzaları ile akım gözlem istasyonları" width="1400" height="619" loading="lazy">
+      <figcaption><span class="en">Study basins and streamflow gauges (dots) of the DSİ master-plan work.</span><span class="tr">DSİ master plan çalışmalarının havzaları ve akım gözlem istasyonları (noktalar).</span></figcaption>
+    </figure>
+    <div class="in">
+      <div class="jh"><h3><span class="org">Hidromod</span> · <span class="en">Data and Modeling Specialist</span><span class="tr">Veri ve Modelleme Uzmanı</span></h3><span class="when"><span class="en">Jan 2026 – present</span><span class="tr">Oca 2026 – günümüz</span></span></div>
+      <p class="sub"><span class="en">Ankara, Türkiye · full-time</span><span class="tr">Ankara, Türkiye · tam zamanlı</span></p>
+      <ul class="pts en">
+        <li>Climate-change assessment and hydrological modeling for the Western Black Sea and Tigris basins within the basin master-plan studies of the General Directorate of State Hydraulic Works (DSİ), supporting long-term water-resources planning.</li>
+        <li>Build, calibrate and evaluate rainfall–runoff models with HBV and TUWmodel, alongside the WRF-Hydro simulations of the project team, together with data-driven methods for flood analysis, watershed management and hydropower optimization.</li>
+        <li>Develop reproducible R and Python workflows for hydrometeorological data quality control, basin-scale analysis, climate-model outputs and operational decision support.</li>
+        <li>Contribute to high-resolution climate projection workflows and HPC execution on TRUBA and MareNostrum 5, connecting model outputs with agricultural and water-resources applications.</li>
+      </ul>
+      <ul class="pts tr">
+        <li>Devlet Su İşleri Genel Müdürlüğü (DSİ) havza master plan çalışmaları kapsamında Batı Karadeniz ve Dicle havzaları için iklim değişikliği değerlendirmesi ve hidrolojik modelleme; uzun vadeli su kaynakları planlamasına destek.</li>
+        <li>Taşkın analizi, havza yönetimi ve hidroelektrik optimizasyonu için HBV ve TUWmodel yağış–akış modellerinin kurulması, kalibrasyonu ve değerlendirilmesi; proje ekibinin WRF-Hydro benzetimleri ve veriye dayalı yöntemlerle birlikte.</li>
+        <li>Hidrometeorolojik veri kalite kontrolü, havza ölçekli analiz, iklim modeli çıktıları ve operasyonel karar desteği için tekrarlanabilir R ve Python iş akışları.</li>
+        <li>TRUBA ve MareNostrum 5 üzerinde yüksek çözünürlüklü iklim projeksiyonu iş akışlarına ve YBH çalıştırmalarına katkı; model çıktılarının tarım ve su kaynakları uygulamalarıyla ilişkilendirilmesi.</li>
+      </ul>
+        </div>
+  </article>
+
+  <article class="job">
+    <figure>
+      <img src="map_3km.jpg" alt="Mean 2 m temperature over Türkiye at 3 km resolution, 1985–2014" width="1400" height="619" loading="lazy">
+      <figcaption><span class="en">Mean temperature, 1985–2014, from the national 3 km climate projections: darker is warmer.</span><span class="tr">Ulusal 3 km iklim projeksiyonlarından 1985–2014 ortalama sıcaklığı: koyu renk daha sıcak.</span></figcaption>
+    </figure>
+    <div class="in">
+      <div class="jh"><h3><span class="org"><span class="en">Middle East Technical University</span><span class="tr">Orta Doğu Teknik Üniversitesi</span></span> · <span class="en">Project Assistant</span><span class="tr">Proje Asistanı</span></h3><span class="when"><span class="en">Feb 2024 – present</span><span class="tr">Şub 2024 – günümüz</span></span></div>
+      <p class="sub"><span class="en">Ankara, Türkiye · part-time and hybrid</span><span class="tr">Ankara, Türkiye · yarı zamanlı ve hibrit</span></p>
+      <ul class="pts en">
+        <li>High-resolution climate projections for Türkiye within the EU Partnership for Local Climate Action in Türkiye, implemented with UNDP and the Directorate of Climate Change: six CMIP6 models dynamically downscaled with WRF to 3 km, from downscaling to bias adjustment and climate-extreme indices.</li>
+        <li>Process large-scale hydrometeorological datasets and dynamically downscaled WRF outputs on TRUBA and MareNostrum 5 through end-to-end, reproducible data workflows.</li>
+        <li>Spatiotemporal analysis of climate-model, satellite and station observations for validation and hydrological applications.</li>
+        <li>Develop and deliver lectures on R-based data analysis and remote sensing.</li>
+      </ul>
+      <ul class="pts tr">
+        <li>UNDP ve İklim Değişikliği Başkanlığı ile yürütülen EU Partnership for Local Climate Action in Türkiye kapsamında Türkiye için yüksek çözünürlüklü iklim projeksiyonları: altı CMIP6 modelinin WRF ile 3 km'ye dinamik ölçek küçültmesi, yanlılık düzeltmesi ve iklim ekstremleri indisleri.</li>
+        <li>Büyük ölçekli hidrometeorolojik veri setlerinin ve WRF çıktılarının TRUBA ve MareNostrum 5 üzerinde uçtan uca, tekrarlanabilir iş akışlarıyla işlenmesi.</li>
+        <li>Doğrulama ve hidrolojik uygulamalar için iklim modeli, uydu ve istasyon gözlemlerinin mekânsal-zamansal analizi.</li>
+        <li>R ile veri analizi ve uzaktan algılama üzerine ders hazırlanması ve verilmesi.</li>
+      </ul>
+      <div class="nums">
+        <div><b>6</b><span class="en">CMIP6 models</span><span class="tr">CMIP6 modeli</span></div>
+        <div><b>2</b><span class="en">scenarios</span><span class="tr">senaryo</span></div>
+        <div><b>3 km</b><span class="en">resolution</span><span class="tr">çözünürlük</span></div>
+        <div><b>1950–2100</b><span class="en">period</span><span class="tr">dönem</span></div>
+      </div>
+    </div>
+  </article>
+</div></section>
+
+<section id="education"><div class="col">
+  <div class="head"><div class="kicker"><span class="en">Education</span><span class="tr">Eğitim</span></div>
+    <h2><span class="en">Middle East Technical University</span><span class="tr">Orta Doğu Teknik Üniversitesi</span></h2></div>
+  <div class="edu">
+    <div class="box">
+      <h3><span class="en">M.Sc. in Civil Engineering – Water Resources</span><span class="tr">İnşaat Mühendisliği Yüksek Lisans – Su Kaynakları</span></h3>
+      <span class="m"><span class="en">2025 – 2027 (expected)</span><span class="tr">2025 – 2027 (beklenen)</span></span>
+      <p class="thesis en"><b>Thesis:</b> Regional climate modeling of Türkiye with MPAS-Atmosphere on a variable-resolution mesh, evaluated against station observations and the national WRF dataset. Supervisor: Prof. Dr. M. Tuğrul Yılmaz.</p>
+      <p class="thesis tr"><b>Tez:</b> Değişken çözünürlüklü ağ üzerinde MPAS-Atmosphere ile Türkiye'nin bölgesel iklim modellemesi; istasyon gözlemleri ve ulusal WRF veri setiyle değerlendirme. Danışman: Prof. Dr. M. Tuğrul Yılmaz.</p>
+      <div class="chips">
+        <span class="en">Statistical Hydrology</span><span class="tr">İstatistiksel Hidroloji</span>
+        <span class="en">Hydroclimatology</span><span class="tr">Hidroklimatoloji</span>
+        <span class="en">Artificial Neural Networks</span><span class="tr">Yapay Sinir Ağları</span>
+        <span class="en">Fuzzy Inference Systems</span><span class="tr">Bulanık Çıkarım Sistemleri</span>
+        <span class="en">Earth System Science</span><span class="tr">Yer Sistem Bilimi</span>
+        <span class="en">Life Cycle Assessment</span><span class="tr">Yaşam Döngüsü Analizi</span>
+      </div>
+    </div>
+    <div class="box">
+      <h3><span class="en">B.Sc. in Civil Engineering</span><span class="tr">İnşaat Mühendisliği Lisans</span></h3>
+      <span class="m"><span class="en">Graduated January 2025 · taught in English</span><span class="tr">Ocak 2025'te mezun · İngilizce eğitim</span></span>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="col">
+  <div class="head"><div class="kicker"><span class="en">Selected research projects</span><span class="tr">Seçilmiş araştırma projeleri</span></div>
+    <h2><span class="en">TÜBİTAK-funded research</span><span class="tr">TÜBİTAK destekli araştırmalar</span></h2></div>
+  <div class="grid3">
+    <div class="pr"><span class="code">TÜBİTAK 1001 · 125Y225</span>
+      <h3><span class="en">Testing climate models against station trends</span><span class="tr">İklim modellerini istasyon eğilimleriyle sınamak</span></h3>
+      <span class="role"><span class="en">Graduate Project Scholar · Dec 2025 – present</span><span class="tr">Lisansüstü Proje Bursiyeri · Ara 2025 – günümüz</span></span>
+      <p class="en">Station-based temporal-trend validation of CMIP5 and CMIP6 temperature, precipitation and wind projections, with emphasis on climate-model evaluation and reproducible processing.</p>
+      <p class="tr">CMIP5 ve CMIP6 sıcaklık, yağış ve rüzgâr projeksiyonlarının istasyon verileriyle eğilim temelli doğrulanması; iklim modeli değerlendirmesi ve tekrarlanabilir işleme.</p></div>
+    <div class="pr"><span class="code">TÜBİTAK 3501 · 122Y259</span>
+      <h3><span class="en">Extreme precipitation in a warmer Türkiye</span><span class="tr">Daha sıcak bir Türkiye'de aşırı yağış</span></h3>
+      <span class="role"><span class="en">Project Scholar · Mar – Sep 2025</span><span class="tr">Proje Bursiyeri · Mar – Eyl 2025</span></span>
+      <p class="en">High-resolution assessment of climate-change impacts on extreme precipitation in Türkiye using state-of-the-art CMIP6 models and statistical downscaling workflows.</p>
+      <p class="tr">Güncel CMIP6 modelleri ve istatistiksel ölçek küçültme iş akışlarıyla Türkiye'de iklim değişikliğinin aşırı yağışa etkilerinin yüksek çözünürlüklü değerlendirilmesi.</p></div>
+    <div class="pr"><span class="code">TÜBİTAK 2525 · 120R065</span>
+      <h3><span class="en">SPACETIME: water and carbon storage (Türkiye–Germany)</span><span class="tr">SPACETIME: su ve karbon depolama (Türkiye–Almanya)</span></h3>
+      <span class="role"><span class="en">Project Scholar · Feb 2024 – Jan 2025</span><span class="tr">Proje Bursiyeri · Şub 2024 – Oca 2025</span></span>
+      <p class="en">Data-driven investigation of terrestrial water and carbon-storage dynamics in Türkiye, integrating climate, land-cover, gridded precipitation and satellite terrestrial water-storage data.</p>
+      <p class="tr">İklim, arazi örtüsü, gridlenmiş yağış ve uydu tabanlı karasal su depolama verilerini birleştirerek Türkiye'de karasal su ve karbon depolama dinamiklerinin veriye dayalı incelenmesi.</p></div>
+  </div>
+</div></section>
+
+<section id="publications"><div class="col stack">
+  <div><div class="kicker"><span class="en">Publications and conference contributions</span><span class="tr">Yayınlar ve bildiriler</span></div>
+    <h2><span class="en">Papers</span><span class="tr">Makaleler</span></h2></div>
+  <div class="pubs">
+    <div class="pub"><span class="tag new"><span class="en">Submitted</span><span class="tr">Gönderildi</span></span><div>
+      <p class="t">Climate change over the Eastern Europe–Mediterranean–Black Sea region in convection-permitting CMIP6 projections for Türkiye</p>
+      <p class="a">Gümüş, B., Yücel, İ., Yılmaz, M. T., Çatal, A. C., Arık, A., <b>Akgedik, İ. D.</b>, Tokuç, A., Oruç, S., Aksuoğlu, F., Söğütlü, G. D., Şenocak, A. U. G., Bağçacı, S. Ç.</p>
+      <p class="v"><i>Journal of Geophysical Research: Atmospheres</i>, 2026</p></div></div>
+    <div class="pub"><span class="tag"><span class="en">Preprint</span><span class="tr">Ön baskı</span></span><div>
+      <p class="t">Convection-permitting dynamical downscaling of ERA5 enhances simulation of climate extremes over Türkiye</p>
+      <p class="a">Arık, A., Yılmaz, M. T., Yücel, İ., Gümüş, B., Çatal, A. C., <b>Akgedik, İ. D.</b>, Aksuoğlu, F., et al.</p>
+      <p class="v"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5850447" target="_blank" rel="noopener"><i>SSRN</i> 5850447</a></p></div></div>
+    <div class="pub"><span class="tag"><span class="en">Paper</span><span class="tr">Makale</span></span><div>
+      <p class="t">High-resolution CMIP6 projections of extreme temperature and precipitation indices over Türkiye</p>
+      <p class="a">Yılmaz, M. T., Tokuç, A., Gümüş, B., Yücel, İ., Arık, A., <b>Akgedik, İ. D.</b>, et al.</p></div></div>
+    <div class="pub"><span class="tag"><span class="en">Conference</span><span class="tr">Bildiri</span></span><div>
+      <p class="t">Evaluation of impact of high-resolution dynamical downscaling of the ERA5 reanalysis dataset over Türkiye</p>
+      <p class="a">Arık, A., Yılmaz, M. T., Yücel, İ., Gümüş, B., Çatal, A. C., <b>Akgedik, İ. D.</b>, et al.</p>
+      <p class="v"><i>Asia Oceania Geosciences Society (AOGS)</i>, 2025</p></div></div>
+  </div>
+  <p class="note"><span class="en">Full and current list:</span><span class="tr">Güncel ve tam liste:</span> <a href="https://scholar.google.com/citations?user=gdYMquUAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://orcid.org/0009-0004-2358-7171" target="_blank" rel="noopener">ORCID</a></p>
+</div></section>
+
+<section id="talks"><div class="col">
+  <div class="head"><div class="kicker"><span class="en">Talks and events</span><span class="tr">Konuşmalar ve etkinlikler</span></div>
+    <h2><span class="en">Sharing the work</span><span class="tr">Çalışmaları paylaşmak</span></h2></div>
+  <div class="events">
+    <article class="ev hero">
+      <span class="type"><span class="en">UN Climate Change Conference</span><span class="tr">BM İklim Değişikliği Konferansı</span></span>
+      <div class="big">COP31</div>
+      <h3><span class="en">Blue Zone · host-country guest</span><span class="tr">Mavi Bölge · ev sahibi ülke konuğu</span></h3>
+      <span class="where"><span class="en">Antalya, Türkiye · November 2026</span><span class="tr">Antalya, Türkiye · Kasım 2026</span></span>
+      <p class="en">Our project's high-resolution climate projections for Türkiye were presented in several sessions by Prof. Dr. M. Tuğrul Yılmaz and Prof. Dr. İsmail Yücel.</p>
+      <p class="tr">Projemizin Türkiye için yüksek çözünürlüklü iklim projeksiyonları Prof. Dr. M. Tuğrul Yılmaz ve Prof. Dr. İsmail Yücel tarafından çeşitli oturumlarda sunuldu.</p>
+    </article>
+    <article class="ev plain">
+      <span class="type"><span class="en">Invited talk · 40 minutes</span><span class="tr">Davetli konuşma · 40 dakika</span></span>
+      <div class="big">TÜBİTAK ULAKBİM</div>
+      <h3><span class="en">High-Resolution Climate Modeling: HPC Infrastructures and Applications</span><span class="tr">Yüksek Çözünürlüklü İklim Modellemesi: YBH Altyapıları ve Uygulamaları</span></h3>
+      <span class="where"><span class="en">Sectoral AI Clustering: Agriculture and Climate · 17 June 2026</span><span class="tr">Sektörel Yapay Zekâ Kümelenmesi: Tarım ve İklim · 17 Haziran 2026</span></span>
+      <p class="en">High-resolution climate projections, WRF workflows, TRUBA, MareNostrum 5 and AI-enabled decision support for agriculture and water management.</p>
+      <p class="tr">Yüksek çözünürlüklü iklim projeksiyonları, WRF iş akışları, TRUBA, MareNostrum 5 ve tarım ile su yönetimi için yapay zekâ destekli karar desteği.</p>
+    </article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="col">
+  <div class="head"><div class="kicker"><span class="en">Technical skills</span><span class="tr">Teknik beceriler</span></div>
+    <h2><span class="en">Tools I work with</span><span class="tr">Kullandığım araçlar</span></h2></div>
+  <div class="skills">
+    <div><h3><span class="en">Programming and analytics</span><span class="tr">Programlama ve analiz</span></h3><div class="chips"><span>R</span><span>Python</span><span>QGIS</span><span class="en">Reproducible pipelines</span><span class="tr">Tekrarlanabilir iş akışları</span><span class="en">Data quality control</span><span class="tr">Veri kalite kontrolü</span><span class="en">Statistics</span><span class="tr">İstatistik</span><span class="en">Time series</span><span class="tr">Zaman serileri</span><span class="en">Visualization</span><span class="tr">Görselleştirme</span></div></div>
+    <div><h3><span class="en">Climate and hydrology</span><span class="tr">İklim ve hidroloji</span></h3><div class="chips"><span>WRF</span><span>MPAS-Atmosphere</span><span>HBV</span><span>TUWmodel</span><span class="en">Dynamical downscaling</span><span class="tr">Dinamik ölçek küçültme</span><span class="en">Rainfall–runoff modeling</span><span class="tr">Yağış–akış modellemesi</span><span class="en">Extreme precipitation</span><span class="tr">Aşırı yağış</span><span class="en">Watershed analysis</span><span class="tr">Havza analizi</span></div></div>
+    <div><h3><span class="en">Data and methods</span><span class="tr">Veri ve yöntemler</span></h3><div class="chips"><span>CMIP5</span><span>CMIP6</span><span>CMIP7</span><span>ERA5</span><span class="en">Station observations</span><span class="tr">İstasyon gözlemleri</span><span class="en">Satellite and remote sensing</span><span class="tr">Uydu ve uzaktan algılama</span><span class="en">Model validation</span><span class="tr">Model doğrulama</span></div></div>
+    <div><h3><span class="en">Computing and decision support</span><span class="tr">Hesaplama ve karar desteği</span></h3><div class="chips"><span>TRUBA</span><span>MareNostrum 5</span><span class="en">Life cycle assessment (LCA) software</span><span class="tr">Yaşam döngüsü analizi (LCA) yazılımı</span><span class="en">HPC workflows</span><span class="tr">YBH iş akışları</span><span class="en">Large environmental datasets</span><span class="tr">Büyük çevresel veri setleri</span><span class="en">AI-enabled decision support</span><span class="tr">Yapay zekâ destekli karar desteği</span></div></div>
+  </div>
+</div></section>
+
+<section id="engagement"><div class="col stack">
+  <div><div class="kicker"><span class="en">Certifications and engagement</span><span class="tr">Sertifikalar ve gönüllülük</span></div>
+    <h2><span class="en">Closer to the water</span><span class="tr">Suya daha yakın</span></h2></div>
+  <p class="water en">When I am not modeling water, I am usually in it: diving along Türkiye's coasts and spending as much time as I can on water sports.</p>
+  <p class="water tr">Suyu modellemediğim zamanlarda genellikle suyun içindeyim: Türkiye kıyılarında dalış yapıyor, fırsat buldukça su sporlarıyla uğraşıyorum.</p>
+  <div class="eng">
+    <div><b>PADI Open Water Diver</b><small><span class="en">METU Underwater Society (ODTÜ SAT) · 2024 – present</span><span class="tr">ODTÜ Sualtı Topluluğu (ODTÜ SAT) · 2024 – günümüz</span></small><p class="en">Recreational diving across multiple coastal regions of Türkiye.</p><p class="tr">Türkiye'nin pek çok kıyı bölgesinde rekreasyonel dalış.</p></div>
+    <div><b>Aspire Leaders Program</b><small><span class="en">Alumna · 2022</span><span class="tr">Mezun · 2022</span></small><p class="en">Selected as a finalist through a six-stage process; completed HarvardX Exercising Leadership and a faculty seminar on evidence-based decision-making.</p><p class="tr">Altı aşamalı bir süreçle finalist seçildim; HarvardX Exercising Leadership programını ve kanıta dayalı karar verme üzerine bir seminer dizisini tamamladım.</p></div>
+    <div><b>Yuvam Dünya</b><small><span class="en">Volunteer · 2021 – present</span><span class="tr">Gönüllü · 2021 – günümüz</span></small><p class="en">Sustainability, climate-awareness and environmental-literacy initiatives.</p><p class="tr">Sürdürülebilirlik, iklim farkındalığı ve çevre okuryazarlığı çalışmaları.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="col">
+  <span>© 2026 İdil Derin Akgedik</span>
+  <span class="en">Last updated November 2026</span><span class="tr">Son güncelleme: Kasım 2026</span>
+</div></footer>
+</main>
+</div>
+
+<script>
+(function () {
+  var site = document.getElementById('site');
+  function setLang(l) {
+    site.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
+    try { localStorage.setItem('ida-lang', l); } catch (e) {}
+  }
+  var start = 'en';
+  try { start = localStorage.getItem('ida-lang') || 'en'; } catch (e) {}
+  if (location.hash === '#tr') start = 'tr';
+  if (location.hash === '#en') start = 'en';
+  setLang(start);
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
+  window.addEventListener('hashchange', function () { if (location.hash === '#tr' || location.hash === '#en') setLang(location.hash.slice(1)); });
+
+  /* menu: jump to a section and mark the one being read */
+  var links = Array.prototype.slice.call(document.querySelectorAll('[data-jump]'));
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var t = document.getElementById(a.dataset.jump);
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ block: 'start' });
+    });
+  });
+  function mark() {
+    var cur = links[0], y = window.innerHeight * 0.3;
+    links.forEach(function (a) { var s = document.getElementById(a.dataset.jump); if (s && s.getBoundingClientRect().top <= y) cur = a; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = links[links.length - 1];
+    links.forEach(function (a) { a.classList.toggle('on', a === cur); });
+  }
+  window.addEventListener('scroll', mark, { passive: true });
+  window.addEventListener('resize', mark);
+  mark();
+
+  var cb = document.getElementById('copy-email');
+  cb.addEventListener('click', function () {
+    var txt = document.getElementById('email').textContent;
+    function done(ok) {
+      cb.querySelector('.en').textContent = ok ? 'Copied' : 'Select and copy';
+      cb.querySelector('.tr').textContent = ok ? 'Kopyalandı' : 'Seçip kopyalayın';
+      setTimeout(function () { cb.querySelector('.en').textContent = 'Copy'; cb.querySelector('.tr').textContent = 'Kopyala'; }, 2000);
+    }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done(false);
+    }
+    try { navigator.clipboard.writeText(txt).then(function () { done(true); }, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
